@@ -17,7 +17,7 @@ export const skills = [
   },
   {
     title: 'Frontend',
-    items: ['React.js', 'Bootstrap', 'CSS3', 'Responsive UI', 'ASP.NET Core MVC'],
+    items: ['React.js', 'Bootstrap', 'CSS3', 'ASP.NET Core MVC'],
   },
   {
     title: 'Backend & Data',
