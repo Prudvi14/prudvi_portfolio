@@ -16,7 +16,7 @@ export function AboutSection({ education }) {
           <div className="meta-list">
             <span>📍 Vizianagaram, Andhra Pradesh</span>
             <span>🌐 English, Telugu, Hindi, German</span>
-            <span>💼 Available for SDE opportunities</span>
+            <span>Focus: full-stack development and AI/LLM evaluation</span>
           </div>
         </div>
 

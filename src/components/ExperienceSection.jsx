@@ -12,10 +12,13 @@ export function ExperienceSection({ experiences }) {
               <div>
                 <h3>{job.role}</h3>
                 <p>{job.company}</p>
+                <small className="experience-relationship">{job.relationship}</small>
               </div>
               <span>{job.period}</span>
             </div>
-            <p>{job.description}</p>
+            <ul className="experience-bullets">
+              {job.bullets.map((bullet) => <li key={bullet}>{bullet}</li>)}
+            </ul>
           </article>
         ))}
       </div>

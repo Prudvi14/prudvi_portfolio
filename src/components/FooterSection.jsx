@@ -1,18 +1,7 @@
-import { SectionHeader } from './SectionHeader'
-
-export function FooterSection({ certifications }) {
+export function FooterSection() {
   return (
     <footer className="footer section">
-      <div className="section cert-section" data-reveal>
-        <SectionHeader tag="Certifications" title="Learning and validation." />
-        <div className="cert-grid">
-          {certifications.map((item) => (
-            <div className="cert-item" key={item} data-reveal>
-              {item}
-            </div>
-          ))}
-        </div>
-      </div>
+      <p className="footer-credit">© Prudvi Gadeshula</p>
     </footer>
   )
 }

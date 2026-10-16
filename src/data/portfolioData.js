@@ -1,96 +1,123 @@
-export const navItems = ['Projects', 'Experience', 'Skills', 'About']
-
-export const stats = [
-  { label: 'Experience', value: '3+', href: 'https://www.linkedin.com/in/gprudvi/' },
-  { label: 'Projects', value: '4+', href: 'https://github.com/Prudvi14' },
-  { label: 'LeetCode', value: '150+', href: 'https://leetcode.com/u/gadeshula_prudvi/' },
-]
+export const navItems = ['About', 'Skills', 'Experience', 'Projects', 'Other']
 
 export const skills = [
   {
-    title: 'AI / LLM',
-    items: ['Prompt Engineering', 'LLM Evaluation', 'Code Review', 'AI Research Tasks'],
+    title: 'AI & LLM',
+    items: ['AI / LLM Evaluation', 'Prompt Engineering', 'Code Review'],
   },
   {
     title: 'Languages',
-    items: ['C++', 'C#', 'JavaScript', 'SQL', 'HTML5'],
+    items: ['C++', 'C#', 'JavaScript', 'SQL', 'HTML5', 'CSS3'],
   },
   {
     title: 'Frontend',
-    items: ['React.js', 'Bootstrap', 'CSS3', 'ASP.NET Core MVC'],
+    items: ['React.js', 'Bootstrap', 'ASP.NET Core MVC'],
   },
   {
     title: 'Backend & Data',
-    items: ['ASP.NET Core Web API', 'EF Core', 'SQL Server', 'REST APIs', 'Power BI'],
+    items: ['ASP.NET Core Web API', 'EF Core', 'SQL Server', 'REST APIs'],
   },
   {
     title: 'Cloud & Tools',
-    items: ['Azure', 'AWS', 'Docker', 'Git', 'GitHub'],
+    items: ['Azure', 'AWS', 'Docker', 'Linux', 'Git', 'GitHub'],
+  },
+  {
+    title: 'Core CS',
+    items: ['DSA'],
+  },
+  {
+    title: 'Data & Analytics',
+    items: ['Power BI'],
   },
 ]
 
 const projectEntries = [
   {
     title: 'IT Service Desk Management System',
-    category: 'Service request portal',
-    description:
-      'Built a full-stack IT service request portal with a 3-layer architecture using EF Core, ASP.NET Core Web API, and React, supporting role-based access for users and admins.',
+    category: 'Featured · .NET Full-Stack',
+    problem: 'Service requests need a structured workflow for users and administrators.',
+    built: 'A React client connected to an ASP.NET Core Web API, with separate API and data-access projects.',
+    decision: 'The API uses EF Core with SQLite; the DAL contains repository abstractions, models, and migrations.',
+    learning: 'Practiced full-stack integration and working with a multi-project .NET solution and an Azure Pipelines definition.',
     stack: ['ASP.NET Core', 'EF Core', 'React', 'SQLite', 'Azure DevOps'],
-    link: 'https://github.com/Prudvi14',
-    start: '2025-01',
+    link: 'https://github.com/Prudvi14/AccentureTraning/tree/main/CapstoneProject',
+    featured: true,
+    architecture: ['React client', 'ASP.NET Core API', 'DAL · EF Core · SQLite'],
   },
   {
     title: 'Student Mental Health & Depression Dashboard',
-    category: 'Power BI Dashboard',
-    description:
-      'Designed an interactive Power BI dashboard analyzing trends across 1,000+ student records and highlighting relationships between depression, CGPA, sleep, and financial stress.',
+    category: 'Power BI · Data & Analytics',
+    problem: 'Make patterns in a student mental-health dataset easier to explore.',
+    built: 'A Power BI report with comparisons across depression, academic pressure, sleep, age groups, and other dataset fields.',
+    decision: 'Present observed relationships as correlations rather than evidence of causation.',
+    learning: 'Practiced organizing dataset fields into visual comparisons and communicating the limits of the analysis.',
     stack: ['Power BI', 'Data Cleaning', 'Visualization', 'Insights'],
-    link: 'https://github.com/Prudvi14/Student_depression_analysis',
-    start: '2024-06',
+    link: 'https://github.com/Prudvi14/Student_depression_analysis-',
+    preview: 'projects/student-depression-dashboard.png',
+    previewAlt: 'Screenshot of the Student Mental Health and Depression Power BI dashboard',
   },
   {
     title: 'RentMyCargo',
-    category: 'Vehicle Rental Platform',
-    description:
-      'Engineered a responsive single-page app for bikes, cars, and cargo vehicles with dynamic booking flows, real-time search, and mobile-friendly layouts.',
+    category: 'React · Vehicle Catalog Prototype',
+    problem: 'Present bikes, cars, and cargo vehicles in one browsable catalog.',
+    built: 'A React interface with category pages, vehicle cards, and client-side search across vehicle data.',
+    decision: 'Use shared vehicle data and reusable cards for bikes, cars, and cargo listings.',
+    learning: 'Practiced React routing, reusable UI, and client-side filtering. The booking action is currently a UI alert, not a connected reservation service.',
     stack: ['React.js', 'JavaScript', 'HTML', 'CSS'],
     link: 'https://github.com/Prudvi14/RentMyCargo',
-    start: '2023-11',
+    preview: 'projects/rentmycargo-bike.jpeg',
+    previewAlt: 'Bike-category illustration used in the RentMyCargo app',
   },
 ]
+
+export const projects = projectEntries
 
 const experienceEntries = [
   {
     role: 'Research Participant',
     company: 'Prolific',
+    relationship: 'Research participation, not employment',
     period: 'Jan 2025 — Present',
     start: '2025-01',
-    description:
-      'Completed research studies covering linguistics, cognitive assessment, and AI/LLM behavior, providing human judgments used as ground-truth data for model evaluation and research workflows.',
+    bullets: [
+      'Participated in studies covering linguistics, cognitive assessment, and AI/LLM behavior.',
+      'Provided human judgments used as ground-truth data in research and model-evaluation workflows.',
+    ],
   },
   {
-    role: 'AI Research & Data Evaluation Associate',
+    role: 'AI / LLM Evaluation',
     company: 'Scalar AI Labs',
+    relationship: 'Role type and dates need confirmation before publication',
     period: 'Jan 2025 — Present',
     start: '2025-01',
-    description:
-      'Contributed to AI and LLM research workflows by evaluating model behavior, validating outputs, and supporting data-quality tasks that improve the reliability and usefulness of AI systems.',
+    bullets: [
+      'Evaluated AI/LLM outputs and reviewed response quality against task requirements.',
+      'Supported output validation and data-quality workflows.',
+    ],
+    needsReview: true,
   },
   {
     role: 'Data Annotator',
     company: 'Outlier AI',
+    relationship: 'AI annotation work',
     period: 'Nov 2024 — Jan 2025',
     start: '2024-11',
-    description:
-      'Reviewed and annotated AI-generated responses for logical consistency, factual accuracy, and code correctness, while designing high-quality prompts for English and coding tasks.',
+    bullets: [
+      'Reviewed AI-generated responses for factual accuracy, logical consistency, and code correctness.',
+      'Created prompts for English-language and coding evaluation tasks.',
+    ],
   },
   {
     role: 'AASE Trainee — .NET Full Stack Development',
     company: 'Accenture',
+    relationship: 'Training program',
     period: 'Jun 2026 — Sep 2026',
     start: '2026-06',
-    description:
-      'Completed intensive .NET Full Stack training covering C#, OOP, LINQ, SOLID principles, design patterns, unit testing, EF Core, SQL Server, Azure fundamentals, Docker, and Agile/DevOps workflows.',
+    bullets: [
+      'Completed AASE full-stack training in C#, .NET, React, API development, testing, and database fundamentals.',
+      'Built a capstone in a multi-project solution with React, ASP.NET Core API, EF Core, and SQLite.',
+      'Worked with an Azure Pipelines build/test/deployment definition included in the capstone repository.',
+    ],
   },
 ]
 
@@ -118,13 +145,28 @@ const educationEntries = [
   },
 ]
 
-export const projects = [...projectEntries].sort((a, b) => b.start.localeCompare(a.start))
-export const experiences = [...experienceEntries].sort((a, b) => b.start.localeCompare(a.start))
+export const experiences = experienceEntries
+  .filter((entry) => !entry.needsReview)
+  .sort((a, b) => b.start.localeCompare(a.start))
+export const experienceReviewNotes = experienceEntries.filter((entry) => entry.needsReview)
 export const education = [...educationEntries].sort((a, b) => b.start.localeCompare(a.start))
 
 export const certifications = [
   'Madhyama & Prathmik Hindi Certification',
-  'Solved 150+ DSA problems on LeetCode',
-  'Accenture AASE — .NET Full Stack Development',
-  'AI / LLM evaluation and annotation training',
+]
+
+export const training = [
+  'Accenture AASE — .NET Full-Stack Development training',
+]
+
+export const achievements = [
+  { title: '183 LeetCode problems solved', verified: 'LeetCode profile checked Oct 16, 2026' },
+]
+
+export const contactEmail = 'gadeshulaprudhvi2004@gmail.com'
+
+export const profileLinks = [
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/gprudvi/' },
+  { label: 'GitHub', href: 'https://github.com/Prudvi14' },
+  { label: 'LeetCode', href: 'https://leetcode.com/u/gadeshula_prudvi/' },
 ]

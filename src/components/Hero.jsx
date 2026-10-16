@@ -1,35 +1,25 @@
-import profileImage from '../../img.jpg'
+import introVideo from '../data/portfolio_video.mp4'
 
-export function Hero({ stats }) {
+export function Hero() {
   return (
     <section className="hero section" id="home" data-reveal>
-      <div className="hero-copy">
-        <h1>
-          I design and build <span>digital experiences</span>
-        </h1>
-        <p className="lead">
-          I&apos;m Prudvi Gadeshula — a Computer Science graduate focused on full-stack development, clean architecture, and practical AI-assisted workflows. I build polished web applications, solve real product problems, and turn tech ideas into usable solutions.
-        </p>
-
-        <div className="cta-row">
-          <a className="primary-btn" href="#projects">
-            View Projects
-          </a>
-        </div>
-
-        <div className="stats-grid">
-          {stats.map((stat) => (
-            <a className="stat-card" href={stat.href} key={stat.label} target="_blank" rel="noreferrer">
-              <strong>{stat.value}</strong>
-              <span>{stat.label}</span>
-            </a>
-          ))}
-        </div>
+      <div className="hero-media" aria-hidden="true">
+        <video autoPlay muted loop playsInline preload="metadata" tabIndex={-1}>
+          <source src={introVideo} type="video/mp4" />
+        </video>
       </div>
+      <div className="hero-overlay" aria-hidden="true" />
 
-      <div className="hero-visual">
-        <div className="image-frame">
-          <img src={profileImage} alt="Prudvi Gadeshula" loading="eager" />
+      <div className="hero-content hero-content-lower">
+        <div className="hero-copy hero-copy-lower">
+          <h1>.Net Full-stack developer</h1>
+          <p className="lead">
+            I&apos;m a Computer Science graduate focused on .NET full-stack development, React applications, and AI/LLM evaluation. I enjoy building practical software, solving technical problems, and improving application quality through testing and iteration.
+          </p>
+          <a className="more-about-link" href="#about">
+            <span aria-hidden="true">↓</span>
+            More about me
+          </a>
         </div>
       </div>
     </section>

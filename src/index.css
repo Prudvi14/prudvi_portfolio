@@ -1,14 +1,22 @@
 :root {
+  --color-ink: #f2eadf;
+  --color-muted: #c5b9a9;
+  --color-canvas: #000;
+  --color-canvas-light: #080808;
+  --color-surface: rgba(22, 22, 22, 0.94);
+  --color-border: rgba(242, 234, 223, 0.14);
+  --color-accent: #c39a6b;
+  --color-accent-soft: rgba(195, 154, 107, 0.16);
   font-family: Inter, 'Segoe UI', sans-serif;
   line-height: 1.5;
   font-weight: 400;
-  color: #111827;
-  background: #eef2f7;
+  color: var(--color-ink);
+  background: var(--color-canvas);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color-scheme: light;
+  color-scheme: dark;
 }
 
 * {
@@ -23,8 +31,7 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
-  background:
-    linear-gradient(180deg, #eef2f7 0%, #f8fafc 100%);
+  background: #000;
 }
 
 img {

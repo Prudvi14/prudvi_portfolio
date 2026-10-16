@@ -1,14 +1,15 @@
-export function Navbar({ items }) {
+export function Navbar({ items, activeSection, onSelect }) {
   return (
     <header className="topbar">
       <div className="brand">Prudvi</div>
       <nav className="nav" aria-label="Main navigation">
-        {items.map((item, index) => (
+        {items.map((item) => (
           <a
             key={item}
-            href={`#${item.toLowerCase()}`}
-            className={index === 0 ? 'active' : ''}
-            aria-current={index === 0 ? 'page' : undefined}
+            href={item === 'About' ? '#home' : item === 'Other' ? '#contact' : `#${item.toLowerCase().replace(/\s+/g, '-')}`}
+            className={activeSection === item ? 'active' : ''}
+            aria-current={activeSection === item ? 'page' : undefined}
+            onClick={(event) => onSelect(event, item)}
           >
             {item}
           </a>
